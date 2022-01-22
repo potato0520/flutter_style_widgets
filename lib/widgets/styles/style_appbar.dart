@@ -2,9 +2,15 @@ import 'package:flutter/material.dart';
 
 Widget styleAppBar(
   BuildContext context, {
-  styleAppBarIcon = '',
-  styleAppBarText = '',
-  styeAppBarTitle = '',
+  styleAppBarTitle = '',
+  styleAppBarBackGroundColor = Colors.white,
+  bool styleTitleState = false,
+  var styleAppBarTitleFontSize = 12,
 }) {
-  return AppBar();
+  return AppBar(
+    title: Text(styleAppBarTitle,
+        style: TextStyle(fontSize: styleAppBarTitleFontSize)),
+    centerTitle: styleTitleState,
+    backgroundColor: styleAppBarBackGroundColor,
+  );
 }
